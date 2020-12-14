@@ -1,3 +1,10 @@
+import os
+os.system('pip install random')
+os.system('pip install telepot')
+os.system('pip install requests')
+
+
+
 import time
 import random
 import requests
