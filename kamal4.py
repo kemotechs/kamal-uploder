@@ -1,3 +1,10 @@
+import os
+os.system('pip install random')
+os.system('pip install telepot')
+os.system('pip install requests')
+
+
+
 import time
 import random
 import requests
@@ -45,7 +52,7 @@ def bot_msg(msg):
                         l = random.randint(0, 43)
                         ta = sh[l]
                         a = ta+' {}'.format(two3)
-                        requests.post('https://api.telegram.org/bot1493300654:AAH6CCEwQhuTDGF-0WQ_Go00_AWgA_tnZpw/sendMessage', {'chat_id':one3, 'text':a})
+                        requests.post('https://api.telegram.org/bot1493300654:AAGlOFcuHl_Z2EROy1hzjaQCIydsNStmY9k/sendMessage', {'chat_id':one3, 'text':a})
                         time.sleep(2)
                 else:
                     bot.sendMessage(chat_id, 'wrong syntax')
@@ -69,7 +76,7 @@ def bot_msg(msg):
             alls = str(chats)+' from '+chat_user
             replay='Hi There'
             bot.sendMessage(chat_id, replay)
-            requests.post('https://api.telegram.org/bot1493300654:AAH6CCEwQhuTDGF-0WQ_Go00_AWgA_tnZpw/sendMessage', {'chat_id':'937837710', 'text':alls})
+            requests.post('https://api.telegram.org/bot1493300654:AAGlOFcuHl_Z2EROy1hzjaQCIydsNStmY9k/sendMessage', {'chat_id':'937837710', 'text':alls})
         
         elif command == '/admins':
             replay=' admins: \n@HQQQ0 && @KEMO3309'
@@ -91,14 +98,14 @@ def bot_msg(msg):
             alls = str(chats)+' from @'+chat_user
             replay='Hi There'
             bot.sendMessage(chat_id, replay)
-            requests.post('https://api.telegram.org/bot1493300654:AAH6CCEwQhuTDGF-0WQ_Go00_AWgA_tnZpw/sendMessage', {'chat_id':'937837710', 'text':alls})
+            requests.post('https://api.telegram.org/bot1493300654:AAGlOFcuHl_Z2EROy1hzjaQCIydsNStmY9k/sendMessage', {'chat_id':'937837710', 'text':alls})
 
         elif command == '/admins@te7feelbot':
             replay=' admins: \n@HQQQ0 && @KEMO3309'
             bot.sendMessage(chat_id, replay)
 
 
-bot = telepot.Bot('1493300654:AAH6CCEwQhuTDGF-0WQ_Go00_AWgA_tnZpw')
+bot = telepot.Bot('1493300654:AAGlOFcuHl_Z2EROy1hzjaQCIydsNStmY9k')
 
 MessageLoop(bot, bot_msg).run_as_thread()
 while 1:
